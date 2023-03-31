@@ -1,4 +1,4 @@
-package CodeConnect.CodeConnect.dto;
+package CodeConnect.CodeConnect.dto.member;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -28,11 +28,7 @@ public class SignUpRequestDto {
 
     private LocalDateTime createMemberTime = LocalDateTime.now();
 
-    private String state;
-
-    private String city;
-
-//    private String street;
+    private String address;
 
     private List<String> fieldList;
 

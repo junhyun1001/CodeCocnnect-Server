@@ -2,9 +2,12 @@ package CodeConnect.CodeConnect.service;
 
 import CodeConnect.CodeConnect.domain.Member;
 import CodeConnect.CodeConnect.dto.*;
+import CodeConnect.CodeConnect.dto.member.SignInRequestDto;
+import CodeConnect.CodeConnect.dto.member.SignInResponseDto;
+import CodeConnect.CodeConnect.dto.member.SignUpRequestDto;
+import CodeConnect.CodeConnect.dto.member.UpdateRequestDto;
 import CodeConnect.CodeConnect.repository.MemberRepository;
 import CodeConnect.CodeConnect.security.TokenProvider;
-import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -133,8 +136,7 @@ public class MemberService {
 
         // 지역과 관심분야 중 하나만 수정할 때, 모두 수정 할 때 어떻게 처리?
         updateMember.setFieldList(dto.getFieldList());
-        updateMember.setCity(dto.getCity());
-        updateMember.setState(dto.getState());
+        updateMember.setAddress(dto.getAddress());
 
         memberRepository.save(updateMember);
 

@@ -1,4 +1,4 @@
-package CodeConnect.CodeConnect.dto;
+package CodeConnect.CodeConnect.dto.member;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,11 +13,7 @@ public class UpdateRequestDto {
 
     private String nickname;
 
-    private String state;
-
-    private String city;
-
-//    private String street;
+    private String address;
 
     private List<String> fieldList;
 }
